@@ -23,11 +23,10 @@ public class Days {
      */
     public static void main(String[] args) {
          
-    Scanner in =new Scanner(System.in);
-    System.out.println("Enter the day number (one,two,three,four,five) in string");
-    String code = in.next();
-    Weekdays t= new Weekdays();
-    t.nameOfDay(code); 
+    Weekdays[] days = Weekdays.values(); // this creates an array of days of the weekday (Monday - Friday) from the enum. The values() method is used because it creates an array that has all the values of enum.
+    for (Weekdays daytemp : days){ // a for-each loop is used because it is designed to iterate over elements in an array.
+        System.out.println(daytemp.name()); // printing the days of the week day.
+    }
     }// TODO code application logic here
     
     
